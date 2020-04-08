@@ -4,7 +4,7 @@
   "description": "",
   "main": "./bin/www",
   "scripts": {
-    "start": "nodemon -r dotenv/config ./bin/www",
+    "start": "",
     "test": "dotenv -e .env.spec mocha test",
     "test-01": "dotenv -e .env.spec mocha test/01-*.test.js; exit 0",
     "test-02": "dotenv -e .env.spec mocha test/02-*.test.js; exit 0",
