@@ -1,0 +1,16 @@
+extends layout.pug
+include utils.pug
+block content
+    +validationErrorSummary(errors)
+    form(action='/park/add' method='post')
+        input(type='hidden' name='_csrf' value=csrfToken)
+        +textField('Park Name', 'parkName', park.parkName )
+        +textField('City', 'city', park.city )
+        +textField('State', 'provinceState', park.provinceState )
+        +textField('Country', 'country', park.country )
+        +textField('Opened', 'opened', park.opened )
+        +textField('Size', 'size', park.size )
+        +textField('Description', 'description', park.description )
+        div(class='py-4')
+            button(type='submit' class='btn btn-primary') Add Park
+                a(href='/' class='btn btn-warning ml-2') Cancel

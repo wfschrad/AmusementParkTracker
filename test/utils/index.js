@@ -30,7 +30,7 @@ const loadModule = (pathToModule) => {
   try {
     moduleToReturn = require(`../${pathToModule}`);
   } catch (err) {
-    // console.log(err);
+    console.log(err);
     moduleToReturn = null;
   }
 

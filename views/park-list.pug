@@ -1,0 +1,17 @@
+extends layout.pug
+block content
+    a(href="/park/add") Add Park
+    table.table.table-striped.table-hover
+        thead.thead-dark
+            tr
+                th(scope='col') Park Name
+                th(scope='col') Location
+                th(scope='col') Opened
+                th(scope='col')
+        tbody
+            each park in parks
+                tr
+                    td= park.parkName
+                    td= `${park.city}, ${park.provinceState} ${park.country}`
+                    td= park.opened
+                    td: a(href=`/park/${park.id}`) Details
